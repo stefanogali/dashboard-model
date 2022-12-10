@@ -1,0 +1,26 @@
+.header-burger-container {
+	display: block;
+	cursor: pointer;
+	width: 18px;
+	margin-left: 10px;
+}
+
+.burger-line {
+	transition: all .15s ease;
+	background: var(--grey);
+	border-radius: 0.125rem;
+	position: relative;
+	display: block;
+	height: 2px;
+	margin-bottom: 3px;
+}
+
+.burger-line:last-child {
+	margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+	.header-burger-container {
+		display: none;
+	}
+}

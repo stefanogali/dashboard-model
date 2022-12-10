@@ -1,0 +1,144 @@
+.panel {
+	box-shadow: none;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.panel-visitors,
+.panel-fridge,
+.panel-office-birthday {
+	width: 100%;
+}
+
+.panel-office-temperature,
+.panel-weather,
+.panel-plants-watering {
+	width: 100%;
+}
+
+.panel-ongoing-projects {
+	width: 100%;
+}
+
+.panel-weather {
+	background-image: var(--theme-color-secondary);
+	color: white;
+	background-color: transparent;
+}
+
+.panel-container {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	height: 100%;
+	box-sizing: border-box;
+	overflow-x: auto;
+}
+
+.panel-inner {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.panel-text {
+	width: 100%;
+}
+
+.panel-text ul {
+	padding: 0;
+	margin: 0;
+}
+
+.panel-list,
+.panel-list-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 10px 0;
+	border-bottom: 1px solid lightgray;
+}
+
+.panel-list-title h5 {
+	margin: 0;
+	flex: 0 0 25%;
+	min-width: 130px;
+}
+
+.panel-list img {
+	max-width: 35px;
+}
+
+.panel-list p {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	flex: 0 0 25%;
+	min-width: 130px;
+	font-size: 0.8rem;
+}
+
+.panel-image {
+	display: none;
+	background-image: var(--theme-color-primary);
+	padding: 30px;
+	border-radius: var(--icon-border-radius);
+}
+
+.panel-weather .panel-image {
+	background-image: none;
+}
+
+.panel-image span {
+	font-size: 2rem;
+	color: var(--white);
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.chart {
+	text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+
+	.panel-visitors,
+	.panel-fridge,
+	.panel-office-birthday {
+		width: 59%;
+		min-width: 420px;
+	}
+
+	.panel-office-temperature,
+	.panel-weather,
+	.panel-plants-watering {
+		width: 39%;
+		min-width: 310px;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.panel-inner {
+		flex-direction: row;
+	}
+
+	.panel-image span {
+		font-size: 5rem;
+	}
+
+	.panel-text{
+		margin-right: 20px
+	}
+
+	.panel-image {
+		display: block;
+	}
+
+	.panel-container {
+		overflow-x: visible;
+	}
+}

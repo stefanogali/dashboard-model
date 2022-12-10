@@ -1,0 +1,20 @@
+.home-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding-top: 20px;
+	margin: 0 auto;
+	max-width: var(--max-page-width);
+}
+
+.home-row-inner{
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	justify-content: space-between;
+	width: 100%;
+	padding-bottom: 20px;
+}

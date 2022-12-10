@@ -1,0 +1,38 @@
+.sidenav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: var(--sidebar-width);
+	overflow-y: auto;
+	box-shadow: none;
+	height: 100%;
+	transform: translateX(calc(var(--sidebar-width) * -1));
+	transition: all .4s ease-in-out;
+	z-index: 99;
+}
+
+.sidenav.open {
+	transform: translateX(0);
+	background-color: var(--layout-background);
+}
+
+.sidenav-inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100%;
+}
+
+.sidebar-logo {
+	max-width: 170px;
+	padding-top: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+	.sidenav {
+		transform: translateX(0);
+	}
+}
+
