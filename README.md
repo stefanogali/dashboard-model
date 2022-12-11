@@ -14,7 +14,7 @@ npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-Fake JSON data are fetched using Fake JSON [https://fakejson.com/](https://app.fakejson.com/)
+Fake JSON data are fetched using Fake JSON [https://fakejson.com/](https://fakejson.com/)
 
 If you download and run (see instructions) the **dashboard-model-server
 you can find on my repositories, please uncomment line 115 below
