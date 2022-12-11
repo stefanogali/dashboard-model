@@ -84,7 +84,7 @@ const Home = () => {
 	useEffect(() => {
 
 		const payload = {
-			token: 'fMj4greY595nja2Ie0IJJg',
+			token: 'your-token-here',
 			data: {
 			  current_visitors: {
 				  active_users: 'numberInt|70,200',
