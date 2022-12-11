@@ -23,6 +23,7 @@
 	justify-content: flex-start;
 	align-items: center;
 	height: 100%;
+	position: relative;
 }
 
 .sidebar-logo {
@@ -30,9 +31,21 @@
 	padding-top: 10px;
 }
 
+.sidebar-close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 25px;
+	cursor: pointer;
+}
+
 @media only screen and (min-width: 1200px) {
 	.sidenav {
 		transform: translateX(0);
+	}
+
+	.sidebar-close{ 
+		display: none;
 	}
 }
 
