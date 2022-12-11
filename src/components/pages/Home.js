@@ -15,24 +15,24 @@ const baseUrlExternal = 'https://app.fakejson.com/q';
 const baseUrlInternal = 'http://localhost:3030';
 
 //fake data
-const fakePayload = {
-	current_visitors: {
-		active_users: '90',
-		active_users_past_one: '100',
-		active_users_past_two: '120',
-		active_users_past_three: '160',
-		active_users_past_four: '90',
-		active_users_past_five: '80',
-		active_users_past_six: '121'
-	},
-	office_temperature: '12.5',
-	outside_weather: {
-		outside_temperature: '14.6',
-		outside_condition: 'sunny|rainy|windy',
-	},
-	plants_watering_due: Date.now(),
-	drinks_remaining: '6',
-}
+// const fakePayload = {
+// 	current_visitors: {
+// 		active_users: '90',
+// 		active_users_past_one: '100',
+// 		active_users_past_two: '120',
+// 		active_users_past_three: '160',
+// 		active_users_past_four: '90',
+// 		active_users_past_five: '80',
+// 		active_users_past_six: '121'
+// 	},
+// 	office_temperature: '12.5',
+// 	outside_weather: {
+// 		outside_temperature: '14.6',
+// 		outside_condition: 'sunny|rainy|windy',
+// 	},
+// 	plants_watering_due: Date.now() / 1000,
+// 	drinks_remaining: '6',
+// }
 
 const Home = () => {
 	const [isLoading, setIsLoading] = useState(true);
@@ -104,18 +104,16 @@ const Home = () => {
 			  drinks_remaining: 'numberInt|0,15',
 			}
 		}
-		// fake data-----------
-		setDashboardDataExternal(fakePayload);
-		fetchData(`${baseUrlInternal}/feed/fake-data`, 'GET', '', false);
-		setIsLoading(false);
+		// -------------fake data used during building of the app-----------
+		// setDashboardDataExternal(fakePayload);
+		// fetchData(`${baseUrlInternal}/feed/fake-data`, 'GET', '', false);
+		// setIsLoading(false);
 		// ------------------
 
 		
-		// fetchData(baseUrlExternal, 'POST', payload, true);
-		// fetchData(`${baseUrlInternal}/feed/fake-data`, 'GET', '', false);
+		fetchData(baseUrlExternal, 'POST', payload, true);
+		//fetchData(`${baseUrlInternal}/feed/fake-data`, 'GET', '', false);
 	}, []);
-
-	// console.log('dashboardData', dashboardDataExternal);
 
 	if (error) {
 		return (
